@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="es-mx" xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "plantilla.dwt" -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>//if (window.parent.frames[0] != window.self) {window.location.href = '/';}</script>
+	<script>window.history.forward(1);</script> 	
+<!-- #BeginEditable "doctitle" -->
+	<title>CCH AZcapotzalco</title>
+
+
+<!-- #EndEditable -->
+
+<link rel="icon" href="/images/logon.png" type="image/x-png">
+<!-- load stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+<link rel="stylesheet" href="/sources/css/grid.css">
+<link rel="stylesheet" href="/sources/css/style.css">
+<link rel="stylesheet" href="/sources/css/gil.css">
+<link rel="stylesheet" href="/sources/css/animations.css">
+<link rel="stylesheet" href="/sources/css/ventanaemergente.css">
+<link rel="stylesheet" href="/sources/menu_azul/menu_azul.css">
+<link rel="stylesheet" href="/sources/css/bootstrap421.css">
+<script src="/sources/js/jquery-3.3.1.js"></script>
+<script src="/sources/js/popper1146.js"></script>
+<script src="/sources/js/bootstrap421.js"></script>
+<link rel="stylesheet" href="/sources/css/bootstrap_gil.css">									  <!-- Bootstrap style -->
+<link rel="stylesheet" href="/sources/css/templatemo-style.css">								   <!-- Templatemo style -->
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="/sources/js/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="/sources/js/respond/1.4.2/respond.min.js"></script>
+	  <![endif]-->
+<script src="/sources/js/font.js"></script>
+<script src="/sources/js/gil.js"></script>
+
+<!-- #BeginEditable "select2" -->
+<link href="sources/js/select2/css/select2.min.gil.css" rel="stylesheet" />
+<script src="sources/js/select2/js/select2.min.js"></script>
+<script>
+var cadena=''
+$(document).ready(function() {
+    $('.mats').select2({language: "es"});
+	$('.mats').on("select2:select", function (e) {
+	cadena=cadena+e.params.data.id
+	$('#matsnews').attr('value',cadena);
+	//alert(cadena);
+	 });
+});
+</script>
+<script>
+
+</script>
+<style>
+
+tbody tr:nth-child(1n) {color: #00557F;}
+tbody tr:nth-child(2n) {background-color: #E1EEf4; color: #00557F;}
+</style>
+<!-- #EndEditable -->
+<style>
+
+html {min-height: 100%!important;position: relative!important;}
+footer {position: absolute!important;bottom: 0!important;width: 100%!important;}
+</style>
+<script type="text/javascript">
+//mayusculas agregar onkeypress="mayus(this);" en el input text
+function mayus(e) {e.value = e.value.toUpperCase();}
+</script>
+</head>
+
+<body >
+<div class="fondoatras " id="fondoatras2" ><div style="position:absolute; left: 40%; right: 40%; top: 30%"><h2 style="color:white" class="centro"><span id="hespera">Espera...</span><br><img src="/images/engranes2.gif"></h2></div></div>
+<div class="pageWrapper">
+	<div id="headWrapper" class="clearfix">
+		<!-- Logo, global navigation menu and search start -->
+		<header id="header" style="	border-bottom: 9px #f4f4f4 solid;">
+			<div class="logo-info">
+				<div class="container">
+					<div class="row">
+						<div class="grid_12">
+							<h1><a href="/">CCH Azcapotzalco<br><h3>Control Escolar</h3><!--<img src="/images/logon.png" alt="logo">--></a></h1>
+							<div class="header_info-block" >
+								<div class="header_search" style="height:80px;">
+									
+										<a id="login" onclick="arriba(); ">
+										<div class="search1">
+											<div style="float:left"><img  src="/images/user_login.png" height="65" alt="Inicio de sesión"></div>
+											<div style="float:left"><span style="font-weight:bold">Iniciar sesión</span><br/>
+												<div style="float:left; margin-left:5px; border-right:1px black solid"><label id="etiqueta1" style="font-size:7px; line-height:normal"><span style="font-weight:bold;">Alumno:</span><br/> # de Cuenta (9 dígitos) y <br/>F Nacimiento (ddmmaaaa)</label></div>
+												<div style="float:left; margin-left:5px;"><label id="etiqueta2" style="font-size:7px; line-height:normal"><span style="font-weight:bold;">Profesor:</span><br/>RFC y Homoclave y <br/># de Trabajador</label></div>
+											</div>
+										</div>
+										</a>
+										<form id="sesion" class="search1 hidden" action="/includes/sesion_valida.asp" method="post">
+											<div style="float:left"><img id="monito2" src="/images/user_login.png" height="65" alt="Inicio de sesión"></div>
+											<div style="float:left;margin-left:5px;" >
+												<label id="etiqueta3" ><span style="font-weight:bold;">Usuario y contraseña</span></label><br />
+												<div style="float:left;">
+													<input type="text" name="usuario" id="usuario" autofocus maxlength="13" onfocus="this.select();" style="font-size:2em!important"><br>
+													<input type="password" name="password" id="passw" onfocus="this.select();" style="font-size:2em!important">
+													<input name="escelular" id="escelular" type="hidden" value="0"/>
+												</div>
+												<div style="float:left;"><input name="envio" id="envio" type="submit" value="" style="width:40px; height:40px; text-decoration:none; background-image:url('/images/go40.png'); background-repeat:no-repeat; border:0 white none; background-color:white"></div>
+											</div>
+										</form>
+										
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="top-head" data-sticky="true" >
+			    <div class="container">
+				    <div class="row" >
+					    <div class="col-xs-12 col-sm-12 col-md- 9 col-lg-9 col-xl-9 top-menu">
+					  	  <!-- top navigation menu start -->
+							<nav class="top-nav mega-menu" style="float:left">
+								<ul id="mnu-eft" class="def-effect" style="float:left">
+									<li class="current hasChildren"><a href="/"><i class="fad fa-home" ></i>&nbsp;Inicio</a></li>
+
+
+<!--	<li class=" hasChildren"><a href="#"><i class="fal fa-question-circle"></i>&nbsp;Preguntas Frequentes</a>
+			<ul style="max-width: 671px;">-->
+			
+				<!--	<li style="transition-delay: 300ms;"><a href="/alumnos/faq.asp"><i class="fal fa-question-circle"></i>&nbsp;Preguntas Frecuentes</a></li>-->
+<!--			</ul>
+	</li>-->
+
+
+								</ul>
+							</nav>
+						</div>
+					    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-xs-center text-sm-center text-md-left text-lg-left text-xl-left">
+							
+						</div>
+						<div class="clearfix"></div>
+				    </div>
+			    </div>
+			</div>
+		</header>
+		<section class="tm-section" id="inicio_seccion">
+			
+			<!-- #BeginEditable "body" -->
+			
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
+						<h3 class="tm-gold-text tm-title">Validación de documentos</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-xs-center"></div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-xs-center datagrid">
+					
+						<table id="tabla" class="display" cellspacing="0" width="100%"><tbody>
+							<tr><td class="derecha negrita">Documento emitido para</td><td>320006610<br>Leija Reyes Cristhoper Hodin</td></tr>
+							<tr><td class="derecha negrita">Tipo de documento</td><td>Comprobante de Inscripción</td></tr>
+							<tr><td class="derecha negrita">Periodo</td><td>2022-2</td></tr>
+							<tr><td class="derecha negrita">Grupo y Materia</td><td class="mono">0526 de Filosofía I<br> 0520 de Estadística y Probabilidad I<br> 0538 de Biología III<br> 0517 de Química III<br> 0505 de Ciencias de la Salud I<br> 0513 de Psicología I<br> 0509 de Latín I<br> 0626 de Filosofía II<br> 0620 de Estadística y Probabilidad II<br> 0638 de Biología IV<br> 0617 de Química IV<br> 0605 de Ciencias de la Salud II<br> 0613 de Psicología II<br> 0609 de Latín II</td></tr>
+							<tr><td class="derecha negrita">Firmado por</td><td>Lic. Antonio Najera Flores<br>Secretario de Asuntos Estudiantiles</td></tr>
+						
+							<tr><td class="derecha negrita">Emitido el</td><td>15 de febrero de 2022</td></tr>
+						</tbody></table>
+					
+					</div>
+				</div>
+	
+	
+			</div>
+			
+			<!-- #EndEditable -->
+			<!-- The overlay and the box -->
+			<div class="fondoatras novisible" id="fondoatras"><div style="position:absolute; left: 40%; right: 40%; top: 30%"><h2 style="color:white">Espera...<br><img src="/images/engranes2.gif"></h2></div></div>
+				<div class="caja novisible" id="caja"><a class="cajacerrar" id="cajacerrar"></a>
+					<iframe id="ventanita" name="ventanita" src="/includes/engranes.html"></iframe>
+				</div>
+			<div id="pie"></div>
+		</section>
+	</div>
+</div>
+
+
+<footer class="tm-footer" >
+	<div class="container">
+<!--		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+				<div class="tm-footer-content-box">
+					<h3 class="tm-gold-text tm-title tm-footer-content-box-title">.</h3>
+					<div class="tm-gray-bg">
+						<p>.</p>
+					</div>	
+				</div>
+			</div>
+		</div>
+-->		<div class="row">
+			<div class="col-xs-12 tm-copyright-col">
+				
+				<p class="tm-copyright-text" style="padding-bottom:5px">Copyright 2018. Desarrollo: M en GTI Gilberto Silva Alonso</p>
+				<div style="float:left">Usuarios Activos:&nbsp;</div>
+				<div style="float:left"><img src='/images/digitos/n0.png' height='20px' /><img src='/images/digitos/n0.png' height='20px' /><img src='/images/digitos/n0.png' height='20px' /><img src='/images/digitos/n3.png' height='20px' /><img src='/images/digitos/n7.png' height='20px' />&nbsp;&nbsp;</div>
+				<div style="float:left">Visitas:&nbsp;</div>
+				<div style="float:left"><img src='/images/digitos/n0.png' height='20px' /><img src='/images/digitos/n2.png' height='20px' /><img src='/images/digitos/n6.png' height='20px' /><img src='/images/digitos/n0.png' height='20px' /><img src='/images/digitos/n9.png' height='20px' /><img src='/images/digitos/n3.png' height='20px' /><img src='/images/digitos/n7.png' height='20px' /><img src='/images/digitos/n1.png' height='20px' /></div>
+				<div style="float:left">&nbsp;desde el 17 de septiembre de 2018.</div>
+				<div style="float:left">&nbsp;[187.163.62.52]</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<script>
+$(document).ready(function(){
+	var alto_footer	=$("footer").css("height");
+	$("#pie").css('height',alto_footer);
+	$(window).resize(function(){
+		alto_footer	=$("footer").css("height");
+		$("#pie").css('height',alto_footer);
+	})
+})
+</script>
+<script type="text/javascript">$("#fondoatras2").fadeOut("slow");$(window).load(function() {});</script>
+<!-- #BeginEditable "ventanita" -->
+
+<script type="text/javascript">
+/*ventanaemergente*/
+$(document).ready(function(){
+	$('body #tabla').on('click', 'a', function(){
+		var objeto='#'+$(this).attr('id');
+		var nal=objeto.substr(4,9);
+		var direpcion=$(this).attr('href')+'?c='+nal;
+    	$('#fondoatras').addClass('visible').removeClass('novisible');
+    	$('#caja').addClass('visible').removeClass('novisible');
+		var $iframe = $('#ventanita');
+		if ( $iframe.length ) {
+			$iframe.attr('src',direpcion);   
+			return false;
+		}
+		return true;
+	}) 			
+})
+</script>	
+
+	<!-- #EndEditable -->
+<script>
+function espera(){$('#fondoatras').addClass('visible').removeClass('novisible');}
+</script>
+<script>
+$(document).ready(function(){
+	$('body ').on('click', '#cajacerrar', function(){
+    	$('#ventanita').attr('src','/includes/engranes.html');
+    	$('#fondoatras').removeClass('visible').addClass('novisible');
+    	$('#caja').removeClass('visible').addClass('novisible');
+    	$('#busqueda').focus();
+	})
+})
+$(document).ready(function(){
+	$('body ').on('click', '#fondoatras', function(){
+    	$('#ventanita').attr('src','/includes/engranes.html');
+    	$('#fondoatras').removeClass('visible').addClass('novisible');
+    	$('#caja').removeClass('visible').addClass('novisible');
+    	$('#busqueda').focus();
+	})
+})
+$(document).keyup(function(event){
+    if(event.which==27)
+    {
+    	$('#ventanita').attr('src','/includes/engranes.html');
+    	$('#fondoatras').removeClass('visible').addClass('novisible');
+    	$('#caja').removeClass('visible').addClass('novisible');
+    	$('#busqueda').focus();
+    }
+});
+var cierra = function(){
+    	$('#ventanita').attr('src','/includes/engranes.html');
+    	$('#fondoatras').removeClass('visible').addClass('novisible');
+    	$('#caja').removeClass('visible').addClass('novisible');
+    	$('#busqueda').focus();
+}
+
+</script>
+	<script>function arriba(){if(top.location!=this.location) {top.location=this.location;} else {inicia_sesion()}}</script>
+
+<a href="#" id="pararriba" class="scrollup">Scroll</a><!-- end scroll to top of the page-->
+
+    
+
+	<!-- load JS files -->
+	<script src="/sources/js/jquery-1.11.3.min.js anterior"></script>			 <!-- jQuery (https://jquery.com/download/) -->
+	<script src="/sources/js/tether.min.js anterior"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+	<script src="/sources/js/bootstrap53_nosirve.js"></script>				 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+	<script type="text/javascript" src="/sources/menu_azul/totop.js"></script>
+	<script type="text/javascript" src="/sources/menu_azul/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="/sources/menu_azul/script.js"></script>
+	<script type="text/javascript" src="/sources/menu_azul/custom.js"></script>
+	<script type="text/javascript" src="/sources/menu_azul/responsive-tabs.min.js"></script>
+	
+	   
+</body>
+<!-- #EndTemplate -->
+</html>
